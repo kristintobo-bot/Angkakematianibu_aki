@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduKesehatan Ibu: Pahami AKI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #e6f7ff; color: #004d99; }
+        .section { margin: 20px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .section:hover { transform: scale(1.05); }
+        .quiz-button { background-color: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center p-3">
+        <h1>EduKesehatan Ibu: Pahami Angka Kematian Ibu</h1>
+        <nav>
+            <a href="#pengertian" class="btn btn-light m-2">Pengertian</a>
+            <a href="#penyebab" class="btn btn-light m-2">Penyebab</a>
+            <a href="#gejala" class="btn btn-light m-2">Gejala</a>
+            <a href="#pencegahan" class="btn btn-light m-2">Pencegahan</a>
+            <a href="#penanganan" class="btn btn-light m-2">Penanganan</a>
+            <a href="#quiz" class="btn btn-light m-2">Kuis</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pengertian" class="section">
+            <h2>Pengertian</h2>
+            <p>Angka Kematian Ibu adalah...</p> <!-- Isi dengan konten di atas -->
+            <img src="https://via.placeholder.com/400" alt="Infografis AKI" style="width:100%;">
+        </section>
+
+        <section id="penyebab" class="section">
+            <h2>Penyebab</h2>
+            <p>Penyebab AKI meliputi...</p> <!-- Isi dengan konten -->
+            <ul>
+                <li>Komplikasi kehamilan</li>
+                <!-- Tambahkan lebih lanjut -->
+            </ul>
+        </section>
+
+        <!-- Lanjutkan untuk gejala, pencegahan, penanganan -->
+
+        <section id="quiz" class="section">
+            <h2>Kuis: Tanda-tanda Gangguan Kehamilan</h2>
+            <p>Jawab pertanyaan berikut untuk menguji pengetahuan Anda!</p>
+            <div id="quiz-container">
+                <button onclick="startQuiz()" class="quiz-button">Mulai Kuis</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center p-3">
+        <p>Sumber: Kemenkes RI. &copy; 2023 EduKesehatan Ibu</p>
+    </footer>
+
+    <script>
+        function startQuiz() {
+            const questions = [
+                { q: "Apa tanda utama preeklamsia?", options: ["Batuk pilek", "Tekanan darah tinggi dan pembengkakan", "Sakit punggung", "Mual ringan"], answer: 1 },
+                // Tambahkan pertanyaan lainnya
+            ];
+            let score = 0;
+            questions.forEach((item, index) => {
+                let userAnswer = prompt(item.q + "\n" + item.options.join("\n"));
+                if (parseInt(userAnswer) === item.answer) {
+                    score++;
+                    alert("Benar!");
+                } else {
+                    alert("Salah! Jawaban benar: " + item.options[item.answer]);
+                }
+            });
+            alert("Skor Anda: " + score + " dari " + questions.length);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
